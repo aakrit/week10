@@ -1,12 +1,21 @@
 <script>
 
-  hello = function(name) {
+  function later(name) {
+    alert("Later, " + name + "!");
+  }
+
+  hello = function(name, z) {
     alert("Hello, " + name + "!");
+    z(name);
   };
 
   goodbye = function(name) {
-    alert("See ya " + name + "!");
+    alert("Goodbye " + name + "!");
   }
+
+  hello("Jeff", function(n) {
+    alert("Go Hawks!");
+  });
 
   // 1. Try calling each of the above functions.
   // 2. Then modify the hello function so that it will call

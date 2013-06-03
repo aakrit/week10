@@ -3,20 +3,19 @@
 <html>
   <head>
     <title>Javascript Playground</title>
-    <script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-2.0.1.min.js">
+    </script>
     <style>
       body { width: 960px; margin: 20px auto;}
+      /*ul { display: none;}*/
+      h1 { cursor: pointer;}
     </style>
   </head>
 
-  <script>
-    // Show an alert box before the body of the page is shown.
-    // Then, try the challenges.
-  </script>
 
   <body>
 
-    <h1>jQuery Challenges</h1>
+    <h1 id="heading">jQuery Challenges</h1>
 
     <ul>
       <li>Clicking the heading above should make this entire list appear and disappear.</li>
@@ -29,6 +28,33 @@
   <script>
     // JS CODE GOES HERE
   </script>
+
+  <script>
+    // Show an alert box before the body of the page is shown.
+    // Then, try the challenges.
+    $("#heading").on("click", function() {
+      $("ul").append("<li>Here is another one</li>");
+    })
+
+    $("a").on("click", function(ev) {
+      ev.preventDefault();
+      alert("Nice try!");
+    })
+
+
+    // var e = document.getElementById("heading");
+    // e.onclick = function() {
+    //   var ul = document.getElementsByTagName("ul")[0];
+    //   if (ul.style.display == "none") {
+    //     ul.style.display = "block";
+    //   }
+    //   else {
+    //     ul.style.display = "none";
+    //   }
+    // }
+
+  </script>
+
   </body>
 </html>
 
