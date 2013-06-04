@@ -44,6 +44,7 @@ class NotesController < ApplicationController
 
     respond_to do |format|
       if @note.save
+        format.js
         format.html { redirect_to @note, notice: 'Note was successfully created.' }
         format.json { render json: @note, status: :created, location: @note }
       else
@@ -76,6 +77,7 @@ class NotesController < ApplicationController
     @note.destroy
 
     respond_to do |format|
+      format.js
       format.html { redirect_to notes_url }
       format.json { head :no_content }
     end
